@@ -13,6 +13,18 @@
 		6830A5A122C51C9E00C62108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6830A5A022C51C9E00C62108 /* Assets.xcassets */; };
 		6830A5A422C51C9E00C62108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6830A5A222C51C9E00C62108 /* LaunchScreen.storyboard */; };
 		705D65E927CD1BCB00EB2DE2 /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65E827CD1BCB00EB2DE2 /* ViewCoding.swift */; };
+		705D65F027CD1E9A00EB2DE2 /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65EF27CD1E9A00EB2DE2 /* FeedHeaderView.swift */; };
+		705D65F227CD1F5900EB2DE2 /* TagFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65F127CD1F5900EB2DE2 /* TagFeedView.swift */; };
+		705D65F427CD20E000EB2DE2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65F327CD20E000EB2DE2 /* UIView+Extension.swift */; };
+		705D65F727CD241B00EB2DE2 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65F627CD241B00EB2DE2 /* FeedModel.swift */; };
+		705D65F927CD2AD900EB2DE2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65F827CD2AD900EB2DE2 /* FeedTableViewCell.swift */; };
+		705D65FB27CD304C00EB2DE2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65FA27CD304C00EB2DE2 /* UITableViewCell+Extension.swift */; };
+		705D65FD27CD30D400EB2DE2 /* FeedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65FC27CD30D400EB2DE2 /* FeedScreenView.swift */; };
+		705D65FF27CD3D7300EB2DE2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D65FE27CD3D7300EB2DE2 /* UIImageView+Extension.swift */; };
+		705D660127CD427900EB2DE2 /* FeedBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660027CD427900EB2DE2 /* FeedBottomView.swift */; };
+		705D660327CD471800EB2DE2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660227CD471800EB2DE2 /* Date+Extension.swift */; };
+		705D660627CD5F8A00EB2DE2 /* FeedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660527CD5F8A00EB2DE2 /* FeedImageView.swift */; };
+		705D660927CD661A00EB2DE2 /* PTCSegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		6830A5A322C51C9E00C62108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6830A5A522C51C9E00C62108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705D65E827CD1BCB00EB2DE2 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
+		705D65EF27CD1E9A00EB2DE2 /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
+		705D65F127CD1F5900EB2DE2 /* TagFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFeedView.swift; sourceTree = "<group>"; };
+		705D65F327CD20E000EB2DE2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		705D65F627CD241B00EB2DE2 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		705D65F827CD2AD900EB2DE2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		705D65FA27CD304C00EB2DE2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		705D65FC27CD30D400EB2DE2 /* FeedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedScreenView.swift; sourceTree = "<group>"; };
+		705D65FE27CD3D7300EB2DE2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		705D660027CD427900EB2DE2 /* FeedBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBottomView.swift; sourceTree = "<group>"; };
+		705D660227CD471800EB2DE2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		705D660527CD5F8A00EB2DE2 /* FeedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageView.swift; sourceTree = "<group>"; };
+		705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCSegmentControll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 		6830A59822C51C9D00C62108 /* PTC_IOS_TEST */ = {
 			isa = PBXGroup;
 			children = (
+				705D660727CD65F500EB2DE2 /* Componets */,
 				705D65EC27CD1CBF00EB2DE2 /* Extensions */,
 				705D65EB27CD1C1400EB2DE2 /* Scenes */,
 				705D65EA27CD1BE600EB2DE2 /* Application */,
@@ -88,6 +113,7 @@
 		705D65EB27CD1C1400EB2DE2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				705D660427CD5F5D00EB2DE2 /* Componets */,
 				705D65ED27CD1CCB00EB2DE2 /* Feed */,
 			);
 			path = Scenes;
@@ -96,6 +122,10 @@
 		705D65EC27CD1CBF00EB2DE2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				705D65F327CD20E000EB2DE2 /* UIView+Extension.swift */,
+				705D65FA27CD304C00EB2DE2 /* UITableViewCell+Extension.swift */,
+				705D65FE27CD3D7300EB2DE2 /* UIImageView+Extension.swift */,
+				705D660227CD471800EB2DE2 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -103,8 +133,46 @@
 		705D65ED27CD1CCB00EB2DE2 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				705D65F527CD23F200EB2DE2 /* Models */,
+				705D65EE27CD1E6800EB2DE2 /* Views */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		705D65EE27CD1E6800EB2DE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				705D65EF27CD1E9A00EB2DE2 /* FeedHeaderView.swift */,
+				705D65F127CD1F5900EB2DE2 /* TagFeedView.swift */,
+				705D65F827CD2AD900EB2DE2 /* FeedTableViewCell.swift */,
+				705D65FC27CD30D400EB2DE2 /* FeedScreenView.swift */,
+				705D660027CD427900EB2DE2 /* FeedBottomView.swift */,
+				705D660527CD5F8A00EB2DE2 /* FeedImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		705D65F527CD23F200EB2DE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				705D65F627CD241B00EB2DE2 /* FeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		705D660427CD5F5D00EB2DE2 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Componets;
+			sourceTree = "<group>";
+		};
+		705D660727CD65F500EB2DE2 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+				705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */,
+			);
+			path = Componets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +246,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705D65F427CD20E000EB2DE2 /* UIView+Extension.swift in Sources */,
+				705D65F927CD2AD900EB2DE2 /* FeedTableViewCell.swift in Sources */,
+				705D660327CD471800EB2DE2 /* Date+Extension.swift in Sources */,
+				705D65F027CD1E9A00EB2DE2 /* FeedHeaderView.swift in Sources */,
 				6830A59C22C51C9D00C62108 /* ViewController.swift in Sources */,
+				705D65FD27CD30D400EB2DE2 /* FeedScreenView.swift in Sources */,
+				705D65FB27CD304C00EB2DE2 /* UITableViewCell+Extension.swift in Sources */,
 				705D65E927CD1BCB00EB2DE2 /* ViewCoding.swift in Sources */,
+				705D660127CD427900EB2DE2 /* FeedBottomView.swift in Sources */,
+				705D65FF27CD3D7300EB2DE2 /* UIImageView+Extension.swift in Sources */,
+				705D660627CD5F8A00EB2DE2 /* FeedImageView.swift in Sources */,
+				705D660927CD661A00EB2DE2 /* PTCSegmentControll.swift in Sources */,
+				705D65F727CD241B00EB2DE2 /* FeedModel.swift in Sources */,
 				6830A59A22C51C9D00C62108 /* AppDelegate.swift in Sources */,
+				705D65F227CD1F5900EB2DE2 /* TagFeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PTC_IOS_TEST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PTC_IOS_TEST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
