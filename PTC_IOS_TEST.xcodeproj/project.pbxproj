@@ -25,6 +25,20 @@
 		705D660327CD471800EB2DE2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660227CD471800EB2DE2 /* Date+Extension.swift */; };
 		705D660627CD5F8A00EB2DE2 /* FeedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660527CD5F8A00EB2DE2 /* FeedImageView.swift */; };
 		705D660927CD661A00EB2DE2 /* PTCSegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */; };
+		705D660D27CD783500EB2DE2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660C27CD783500EB2DE2 /* Coordinator.swift */; };
+		705D660F27CD785E00EB2DE2 /* CoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D660E27CD785E00EB2DE2 /* CoordinatorOutput.swift */; };
+		705D661227CD78A000EB2DE2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661127CD78A000EB2DE2 /* RouterProtocol.swift */; };
+		705D661527CD78E100EB2DE2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661427CD78E100EB2DE2 /* BaseCoordinator.swift */; };
+		705D661727CD790700EB2DE2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661627CD790700EB2DE2 /* AppCoordinator.swift */; };
+		705D661927CD798600EB2DE2 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661827CD798600EB2DE2 /* Presentable.swift */; };
+		705D661B27CD79AC00EB2DE2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661A27CD79AC00EB2DE2 /* Router.swift */; };
+		705D661E27CD7A7F00EB2DE2 /* FeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D661D27CD7A7F00EB2DE2 /* FeedFactory.swift */; };
+		705D662127CD7B6C00EB2DE2 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662027CD7B6C00EB2DE2 /* CoordinatorFactory.swift */; };
+		705D662427CD7BEA00EB2DE2 /* BaseHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662327CD7BEA00EB2DE2 /* BaseHomeCoordinator.swift */; };
+		705D662627CD7C3500EB2DE2 /* BaseHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662527CD7C3500EB2DE2 /* BaseHomeFactory.swift */; };
+		705D662827CD7CE900EB2DE2 /* BaseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662727CD7CE900EB2DE2 /* BaseHomeViewController.swift */; };
+		705D662A27CD822100EB2DE2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662927CD822100EB2DE2 /* FeedViewController.swift */; };
+		705D662C27CD8BF300EB2DE2 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D662B27CD8BF300EB2DE2 /* DefaultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +62,20 @@
 		705D660227CD471800EB2DE2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		705D660527CD5F8A00EB2DE2 /* FeedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageView.swift; sourceTree = "<group>"; };
 		705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCSegmentControll.swift; sourceTree = "<group>"; };
+		705D660C27CD783500EB2DE2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		705D660E27CD785E00EB2DE2 /* CoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorOutput.swift; sourceTree = "<group>"; };
+		705D661127CD78A000EB2DE2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		705D661427CD78E100EB2DE2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		705D661627CD790700EB2DE2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		705D661827CD798600EB2DE2 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		705D661A27CD79AC00EB2DE2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		705D661D27CD7A7F00EB2DE2 /* FeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFactory.swift; sourceTree = "<group>"; };
+		705D662027CD7B6C00EB2DE2 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		705D662327CD7BEA00EB2DE2 /* BaseHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeCoordinator.swift; sourceTree = "<group>"; };
+		705D662527CD7C3500EB2DE2 /* BaseHomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeFactory.swift; sourceTree = "<group>"; };
+		705D662727CD7CE900EB2DE2 /* BaseHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeViewController.swift; sourceTree = "<group>"; };
+		705D662927CD822100EB2DE2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		705D662B27CD8BF300EB2DE2 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +108,7 @@
 		6830A59822C51C9D00C62108 /* PTC_IOS_TEST */ = {
 			isa = PBXGroup;
 			children = (
+				705D660A27CD781900EB2DE2 /* Coordinator */,
 				705D660727CD65F500EB2DE2 /* Componets */,
 				705D65EC27CD1CBF00EB2DE2 /* Extensions */,
 				705D65EB27CD1C1400EB2DE2 /* Scenes */,
@@ -113,6 +142,7 @@
 		705D65EB27CD1C1400EB2DE2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				705D662227CD7BB300EB2DE2 /* BaseHome */,
 				705D660427CD5F5D00EB2DE2 /* Componets */,
 				705D65ED27CD1CCB00EB2DE2 /* Feed */,
 			);
@@ -135,6 +165,7 @@
 			children = (
 				705D65F527CD23F200EB2DE2 /* Models */,
 				705D65EE27CD1E6800EB2DE2 /* Views */,
+				705D662927CD822100EB2DE2 /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -173,6 +204,65 @@
 				705D660827CD661A00EB2DE2 /* PTCSegmentControll.swift */,
 			);
 			path = Componets;
+			sourceTree = "<group>";
+		};
+		705D660A27CD781900EB2DE2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				705D661C27CD79DD00EB2DE2 /* Factories */,
+				705D661327CD78D000EB2DE2 /* Parents */,
+				705D661027CD788800EB2DE2 /* Router */,
+				705D660B27CD782400EB2DE2 /* Protocols */,
+				705D661627CD790700EB2DE2 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		705D660B27CD782400EB2DE2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				705D660C27CD783500EB2DE2 /* Coordinator.swift */,
+				705D660E27CD785E00EB2DE2 /* CoordinatorOutput.swift */,
+				705D661827CD798600EB2DE2 /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		705D661027CD788800EB2DE2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				705D661127CD78A000EB2DE2 /* RouterProtocol.swift */,
+				705D661A27CD79AC00EB2DE2 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		705D661327CD78D000EB2DE2 /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				705D661427CD78E100EB2DE2 /* BaseCoordinator.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		705D661C27CD79DD00EB2DE2 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				705D661D27CD7A7F00EB2DE2 /* FeedFactory.swift */,
+				705D662027CD7B6C00EB2DE2 /* CoordinatorFactory.swift */,
+				705D662527CD7C3500EB2DE2 /* BaseHomeFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		705D662227CD7BB300EB2DE2 /* BaseHome */ = {
+			isa = PBXGroup;
+			children = (
+				705D662327CD7BEA00EB2DE2 /* BaseHomeCoordinator.swift */,
+				705D662727CD7CE900EB2DE2 /* BaseHomeViewController.swift */,
+				705D662B27CD8BF300EB2DE2 /* DefaultViewController.swift */,
+			);
+			path = BaseHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,21 +336,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705D661B27CD79AC00EB2DE2 /* Router.swift in Sources */,
+				705D661E27CD7A7F00EB2DE2 /* FeedFactory.swift in Sources */,
+				705D661227CD78A000EB2DE2 /* RouterProtocol.swift in Sources */,
+				705D660D27CD783500EB2DE2 /* Coordinator.swift in Sources */,
 				705D65F427CD20E000EB2DE2 /* UIView+Extension.swift in Sources */,
+				705D660F27CD785E00EB2DE2 /* CoordinatorOutput.swift in Sources */,
+				705D662A27CD822100EB2DE2 /* FeedViewController.swift in Sources */,
+				705D662427CD7BEA00EB2DE2 /* BaseHomeCoordinator.swift in Sources */,
 				705D65F927CD2AD900EB2DE2 /* FeedTableViewCell.swift in Sources */,
+				705D662C27CD8BF300EB2DE2 /* DefaultViewController.swift in Sources */,
 				705D660327CD471800EB2DE2 /* Date+Extension.swift in Sources */,
 				705D65F027CD1E9A00EB2DE2 /* FeedHeaderView.swift in Sources */,
+				705D662627CD7C3500EB2DE2 /* BaseHomeFactory.swift in Sources */,
+				705D662827CD7CE900EB2DE2 /* BaseHomeViewController.swift in Sources */,
 				6830A59C22C51C9D00C62108 /* ViewController.swift in Sources */,
 				705D65FD27CD30D400EB2DE2 /* FeedScreenView.swift in Sources */,
 				705D65FB27CD304C00EB2DE2 /* UITableViewCell+Extension.swift in Sources */,
 				705D65E927CD1BCB00EB2DE2 /* ViewCoding.swift in Sources */,
 				705D660127CD427900EB2DE2 /* FeedBottomView.swift in Sources */,
+				705D661727CD790700EB2DE2 /* AppCoordinator.swift in Sources */,
+				705D662127CD7B6C00EB2DE2 /* CoordinatorFactory.swift in Sources */,
 				705D65FF27CD3D7300EB2DE2 /* UIImageView+Extension.swift in Sources */,
 				705D660627CD5F8A00EB2DE2 /* FeedImageView.swift in Sources */,
 				705D660927CD661A00EB2DE2 /* PTCSegmentControll.swift in Sources */,
+				705D661527CD78E100EB2DE2 /* BaseCoordinator.swift in Sources */,
 				705D65F727CD241B00EB2DE2 /* FeedModel.swift in Sources */,
 				6830A59A22C51C9D00C62108 /* AppDelegate.swift in Sources */,
 				705D65F227CD1F5900EB2DE2 /* TagFeedView.swift in Sources */,
+				705D661927CD798600EB2DE2 /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

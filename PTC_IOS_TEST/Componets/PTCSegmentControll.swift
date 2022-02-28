@@ -41,6 +41,17 @@ class PTCSegmentControll: UIView {
     
     public private(set) var selectedIndex : Int = 0
     
+    convenience init(buttonTitle: [String],
+                     height: CGFloat,
+                     textColor: UIColor,
+                     selectorViewColor: UIColor,
+                     selectorTextColor: UIColor) {
+        self.init(buttonTitle: buttonTitle, height: height)
+        self.textColor = textColor
+        self.selectorTextColor = selectorTextColor
+        self.selectorViewColor = selectorViewColor
+    }
+    
     required init(buttonTitle: [String], height: CGFloat) {
         self.buttonTitles = buttonTitle
         self.height = height
