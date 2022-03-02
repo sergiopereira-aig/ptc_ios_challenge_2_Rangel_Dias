@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Base coordinator
 class BaseCoordinator: NSObject, Coordinator {
     
     var childCoordinators: [Coordinator] = []

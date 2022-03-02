@@ -64,7 +64,7 @@ extension FeedHeaderView: ViewCoding {
             .anchorSize( heightConstant: 20)
         
         labelHeader
-            .anchorHorizontal(left: leftAnchor, right: followButton.leftAnchor, rightConstant: 15)
+            .anchorHorizontal(left: leftAnchor, right: followButton.leftAnchor, rightConstant: 12)
             .anchorVertical(top: tagView.topAnchor, bottom: bottomAnchor, topConstant: 30, bottomConstant: 15)
         
         followButton

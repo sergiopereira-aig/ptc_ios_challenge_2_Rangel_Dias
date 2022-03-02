@@ -11,7 +11,7 @@ import UIKit
 
 struct BaseHomeFactory {
     
-    func makeController(_ controllers: [UIViewController], _ icons: [String]) -> UIViewController {
-        return BaseHomeViewController(controllers, icons)
+    func makeController(_ controllers: [UIViewController], _ icons: [String], _ titles: [String]) -> UIViewController {
+        return BaseHomeViewController(controllers, icons, titles)
     }
 }

@@ -14,7 +14,8 @@ final class FeedImageView: UIImageView {
         case seeMore
         case normal
     }
-
+    
+    //MARK: -> Views
     lazy var coverLayer: UIView = {
         let c = UIView()
         c.isHidden = true
@@ -36,6 +37,8 @@ final class FeedImageView: UIImageView {
             coverLayer.isHidden = state == .normal
         }
     }
+    
+    //MARK: -> Init
     required init() {
         super.init(frame: .zero)
         setupView()
@@ -46,6 +49,7 @@ final class FeedImageView: UIImageView {
     }
 }
 
+//MARK: -> View coding
 extension FeedImageView: ViewCoding {
     func buildViewHierarchy() {
         coverLayer.addSubview(titleLabel)
@@ -57,5 +61,11 @@ extension FeedImageView: ViewCoding {
         titleLabel.anchorCenterToSuperview()
         
         coverLayer.fillSuperview()
+    }
+    
+    func setupAdditionalConfiguration() {
+        self.layer.cornerRadius = 5
+        self.clipsToBounds = true
+        self.layer.masksToBounds = true
     }
 }

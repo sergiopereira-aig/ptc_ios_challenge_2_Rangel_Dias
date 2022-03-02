@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// class responsible for navigation
 class Router: NSObject, RouterProtocol{
 
     private weak var rootController: UINavigationController?
@@ -23,9 +24,10 @@ class Router: NSObject, RouterProtocol{
     
     private func setAddtionalConfing() {
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .darkGray
+        appearance.backgroundColor = UIColor(red: 40/255.0, green: 40/255.0, blue: 40/255.0, alpha: 1.0)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

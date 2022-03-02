@@ -8,9 +8,9 @@
 
 import UIKit
 
-
 final class DefaultViewController: UIViewController {
     
+    //MARK:  -> Views
     lazy var label: UILabel = {
        let l = UILabel()
         l.numberOfLines = .zero
@@ -20,6 +20,7 @@ final class DefaultViewController: UIViewController {
         return l
     }()
     
+    //MARK: -> View life cycle
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       self.tabBarController?.navigationItem.title = "Under developement"
@@ -27,6 +28,7 @@ final class DefaultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         view.addSubview(label)
         

@@ -12,8 +12,10 @@ protocol PTCSegmentControllDelegate: AnyObject {
     func didSelect(_ index: Int)
 }
 
+///Custom segment controll
 class PTCSegmentControll: UIView {
     
+    //MARK: -> Views
     lazy var hStack: UIStackView = {
         let s = UIStackView()
         s.axis = .horizontal
@@ -32,6 +34,8 @@ class PTCSegmentControll: UIView {
     private var buttons: [UIButton]!
     
     private var buttonTitles:[String]!
+    
+    //MARK: -> Other properties
     var textColor:UIColor = .gray
     var selectorViewColor: UIColor = .orange
     var selectorTextColor: UIColor = .orange
@@ -41,19 +45,20 @@ class PTCSegmentControll: UIView {
     
     public private(set) var selectedIndex : Int = 0
     
-    convenience init(buttonTitle: [String],
+    //MARK: -> Init
+    convenience init(buttonTitles: [String],
                      height: CGFloat,
                      textColor: UIColor,
                      selectorViewColor: UIColor,
                      selectorTextColor: UIColor) {
-        self.init(buttonTitle: buttonTitle, height: height)
+        self.init(buttonTitles: buttonTitles, height: height)
         self.textColor = textColor
         self.selectorTextColor = selectorTextColor
         self.selectorViewColor = selectorViewColor
     }
     
-    required init(buttonTitle: [String], height: CGFloat) {
-        self.buttonTitles = buttonTitle
+    required init(buttonTitles: [String], height: CGFloat) {
+        self.buttonTitles = buttonTitles
         self.height = height
         super.init(frame: .zero)
         setupView()
@@ -91,7 +96,7 @@ class PTCSegmentControll: UIView {
     }
 }
 
-
+//MARK: -> View coding
 extension PTCSegmentControll: ViewCoding {
     func buildViewHierarchy() {
         buttons = createButtons()

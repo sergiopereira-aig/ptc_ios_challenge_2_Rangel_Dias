@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Defines methods for navigatin
 protocol RouterProtocol: Presentable {
   func present(_ scene: Presentable?)
   func present(_ scene: Presentable?, animated: Bool)

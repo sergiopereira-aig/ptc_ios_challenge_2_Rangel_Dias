@@ -8,8 +8,12 @@
 
 import UIKit
 
+///
+typealias FeedTapImageCallback = ((String?) -> Void)
+
 class FeedTableViewCell: UITableViewCell {
     
+    //MARK: -> Views
     lazy var header: FeedHeaderView = {
         return FeedHeaderView()
     }()
@@ -36,13 +40,8 @@ class FeedTableViewCell: UITableViewCell {
         v.layer.cornerRadius = 5
         return v
     }()
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    //MARK: -> Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -52,13 +51,20 @@ class FeedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func config(_ feedModel: FeedModel) {
+    func config(_ feedModel: FeedModel, didTapCellCallback: FeedTapImageCallback?) {
         header.config(feedModel.header)
-        imagesContentView.config(feedModel.images)
-        bottomView.config(bottomDescription: feedModel.description, date: feedModel.date.toString())
+        imagesContentView.config(feedModel.images, deepLink: feedModel.deepLink, tag: feedModel.header.tag, didTapImageCallback: didTapCellCallback)
+        bottomView.config(bottomDescription: feedModel.description, date: feedModel.date)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imagesContentView.prepareForReuse()
+        bottomView.prepareForReuse()
     }
 }
 
+//MARK: -> View coding
 extension FeedTableViewCell: ViewCoding {
     func buildViewHierarchy() {
         vstack.addArrangedSubview(header)
@@ -82,6 +88,7 @@ extension FeedTableViewCell: ViewCoding {
 
 fileprivate class ImagesContentView: UIView, ViewCoding {
     
+    //MARK: -> Views
     lazy var hStack: UIStackView = {
         let s = UIStackView()
         s.axis = .horizontal
@@ -101,7 +108,6 @@ fileprivate class ImagesContentView: UIView, ViewCoding {
     lazy var middleImgView: FeedImageView = {
         let img = FeedImageView()
         img.contentMode = .scaleToFill
-        img.backgroundColor = .yellow
         return img
     }()
     
@@ -111,10 +117,16 @@ fileprivate class ImagesContentView: UIView, ViewCoding {
         return img
     }()
     
-    var didTapOnImages: (() -> Void)?
+    lazy var customImagesDisplay: CustomImagesDisplay = {
+        return CustomImagesDisplay()
+    }()
     
-    init(didTapOnImages: (() -> Void)? = nil) {
-        self.didTapOnImages = didTapOnImages
+    //MARK: -> Properties
+    var deepLink: String?
+    var didTapOnImages: FeedTapImageCallback?
+    
+    //MARK: -> Init
+    init() {
         super.init(frame: .zero)
         setupView()
     }
@@ -125,7 +137,6 @@ fileprivate class ImagesContentView: UIView, ViewCoding {
     
     func buildViewHierarchy() {
         hStack.addArrangedSubview(leftImgView)
-        hStack.addArrangedSubview(middleImgView)
         hStack.addArrangedSubview(rightImgView)
         
         addSubview(hStack)
@@ -139,7 +150,6 @@ fileprivate class ImagesContentView: UIView, ViewCoding {
         
         
         leftImgView.anchorSize(heightConstant: size)
-        middleImgView.anchorSize(heightConstant: size)
         rightImgView.anchorSize(heightConstant: size)
         
         hStack.fillSuperview()
@@ -152,14 +162,107 @@ fileprivate class ImagesContentView: UIView, ViewCoding {
     }
     
     @objc private func didTapImages() {
-        didTapOnImages?()
+        didTapOnImages?(deepLink)
+    }
+    
+    func config(_ images: [String], deepLink: String?, tag: Tag, didTapImageCallback: FeedTapImageCallback?) {
+        didTapOnImages = didTapImageCallback
+        
+        ///Should make a logic in case there was not just 3 images
+        leftImgView.loadImage(from: images[0])
+        rightImgView.loadImage(from: images[2])
+        
+        if tag == .recommendedSeller {
+            customImagesDisplay.isHidden = false
+            middleImgView.isHidden = true
+            hStack.insertArrangedSubview(customImagesDisplay, at: 1)
+            customImagesDisplay.config(images)
+        } else {
+            customImagesDisplay.isHidden = true
+            middleImgView.isHidden = false
+            hStack.insertArrangedSubview(middleImgView, at: 1)
+            middleImgView.loadImage(from: images[1])
+        }
+        
+        rightImgView.state = .seeMore
+        
+        self.deepLink = deepLink
+    }
+    
+    func prepareForReuse() {
+        hStack.removeArrangedSubview(customImagesDisplay)
+        hStack.removeArrangedSubview(middleImgView)
+    }
+}
+
+fileprivate class CustomImagesDisplay: UIView, ViewCoding {
+    
+    //MARK: -> Views
+    lazy var hStack: UIStackView = {
+        let s = UIStackView()
+        s.axis = .horizontal
+        s.distribution = .fillEqually
+        s.alignment = .fill
+        s.isUserInteractionEnabled = true
+        s.spacing = 2
+        return s
+    }()
+    
+    lazy var vStack: UIStackView = {
+        let s = UIStackView()
+        s.axis = .vertical
+        s.distribution = .fillEqually
+        s.alignment = .fill
+        s.isUserInteractionEnabled = true
+        s.spacing = 2
+        return s
+    }()
+    lazy var leftImgView: FeedImageView = {
+        let img = FeedImageView()
+        img.contentMode = .scaleToFill
+        return img
+    }()
+    
+    lazy var rightImgView: FeedImageView = {
+        let img = FeedImageView()
+        img.contentMode = .scaleToFill
+        return img
+    }()
+    
+    lazy var bottomImgView: FeedImageView = {
+        let img = FeedImageView()
+        img.contentMode = .scaleToFill
+        return img
+    }()
+    
+    //MARK: -> Init
+    init() {
+        super.init(frame: .zero)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: -> View coding
+    func buildViewHierarchy() {
+        hStack.addArrangedSubview(leftImgView)
+        hStack.addArrangedSubview(rightImgView)
+        
+        vStack.addArrangedSubview(hStack)
+        vStack.addArrangedSubview(bottomImgView)
+        
+        addSubview(vStack)
+    }
+    
+    func setupConstraints() {
+        vStack.fillSuperview()
     }
     
     func config(_ images: [String]) {
-        leftImgView.loadFromURL(imgUrl: images[0])
-        middleImgView.loadFromURL(imgUrl: images[1])
-        rightImgView.loadFromURL(imgUrl: images[2])
-        
-        rightImgView.state = .seeMore
+        leftImgView.loadImage(from: images[0])
+        rightImgView.loadImage(from: images[1])
+        bottomImgView.loadImage(from: images[2])
     }
 }

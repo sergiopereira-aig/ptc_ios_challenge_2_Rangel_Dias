@@ -8,29 +8,44 @@
 
 import UIKit
 
+/// function to make easier to download images
 extension UIImageView {
 
-    //load image async from inaternet
-    func loadFromURL(imgUrl:String){
-        //NSURL
-        guard let url = URL(string: imgUrl) else { return }
-        //Request
+    func loadImage(from url:String){
+    
+        guard let url = URL(string: url) else { return }
+        
         let request = URLRequest(url: url)
-        //Session
+        
         let session = URLSession.shared
-        //Data task
+        let indicator = createLoadingIndicator()
+        
         let datatask = session.dataTask(with: request) { (data, response, error) -> Void in
-            if error != nil {
+            guard error == nil, let data = data else {
                 print(error?.localizedDescription as Any)
+                ///Should handle erro with a default image, for example
+                return
             }
             
             DispatchQueue.main.async {
-                self.image = UIImage(data: data!)
+                indicator.removeFromSuperview()
+                self.image = UIImage(data: data)
             }
         }
-        
         datatask.resume()
     }
 
-
+    private func createLoadingIndicator() -> UIActivityIndicatorView {
+        let indicator = UIActivityIndicatorView(style: .medium)
+    
+        DispatchQueue.main.async {
+            self.addSubview(indicator)
+            
+            indicator.anchorCenterToSuperview()
+            
+            indicator.startAnimating()
+        }
+    
+        return indicator
+    }
 }

@@ -16,6 +16,7 @@ final class TagFeedView: UIView {
         l.numberOfLines = 1
         l.font = .systemFont(ofSize: 14)
         l.textAlignment = .center
+        l.textColor = .white
         return l
     }()
     
@@ -23,7 +24,7 @@ final class TagFeedView: UIView {
     private var text: String?
     private var bgColor: UIColor?
     
-    
+    //MARK: -> Init
     init(text: String, backgroundColor: UIColor) {
         self.text = text
         self.bgColor = backgroundColor
@@ -48,7 +49,7 @@ final class TagFeedView: UIView {
     
     func config(tag: Tag) {
         self.backgroundColor = tag.color
-        self.labelHeader.text = tag.text
+        self.labelHeader.text = tag.rawValue
     }
 }
 

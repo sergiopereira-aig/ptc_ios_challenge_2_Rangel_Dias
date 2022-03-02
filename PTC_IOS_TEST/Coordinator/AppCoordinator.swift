@@ -8,10 +8,7 @@
 
 import Foundation
 
-fileprivate enum InitializeInstructor{
-    case home
-}
-
+/// Main app coordinator
 final class AppCoordinator: BaseCoordinator {
     
     //MARK: -> Properties

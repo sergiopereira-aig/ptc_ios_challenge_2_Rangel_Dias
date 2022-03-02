@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol CoordinatorOutput: Coordinator {
     var finishFlow: (() -> Void)? { get set }
 }

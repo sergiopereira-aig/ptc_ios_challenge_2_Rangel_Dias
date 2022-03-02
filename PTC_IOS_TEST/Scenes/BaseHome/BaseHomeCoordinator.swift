@@ -29,7 +29,7 @@ final class BaseHomeCoordinator: BaseCoordinator {
         let controllers: [UIViewController] = [
             DefaultViewController(),
             DefaultViewController(),
-            FeedFactory().makeController(),
+            FeedFactory().makeController(router: router),
             DefaultViewController(),
             DefaultViewController()
         ]
@@ -42,7 +42,15 @@ final class BaseHomeCoordinator: BaseCoordinator {
            "point.3.connected.trianglepath.dotted"
         ]
         
-        let baseHomeController = factory.makeController(controllers, icons)
+        let titles: [String] = [
+           "Home",
+           "Categories",
+           "Feed",
+           "Account",
+           "Help"
+        ]
+        
+        let baseHomeController = factory.makeController(controllers, icons, titles)
         router.setRootScene(baseHomeController, hideBar: false)
     }
 }

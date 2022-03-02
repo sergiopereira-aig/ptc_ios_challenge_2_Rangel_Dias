@@ -61,7 +61,11 @@ final class FeedBottomView: UIView {
         dateTopToSuperview?.isActive = !hasBottomLabel
         dateTopToBottomLabel?.isActive = hasBottomLabel
     }
-
+    
+    func prepareForReuse() {
+        dateTopToSuperview?.isActive = false
+        dateTopToBottomLabel?.isActive = false
+    }
 }
 
 //MARK: -> View coding

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Protocol to make easier to setup view coding
 protocol ViewCoding {
     
     func buildViewHierarchy()
@@ -18,7 +19,6 @@ protocol ViewCoding {
 
     func setupView()
 }
-
 
 extension ViewCoding {
     func setupView() {

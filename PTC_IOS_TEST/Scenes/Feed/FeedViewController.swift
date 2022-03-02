@@ -10,9 +10,22 @@ import UIKit
 
 class FeedViewController: UIViewController {
 
-    let feedView = FeedScreenView()
+    let feedView: FeedView
     
-    let segmentControll = PTCSegmentControll(buttonTitle: ["Following", "Explore"], height: 50)
+    //MARK: -> Init
+    init(feedView: FeedView) {
+        self.feedView = feedView
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: -> View life cycle
+    override func loadView() {
+        view = feedView
+    }
     
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
@@ -21,23 +34,6 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(segmentControll)
-        view.addSubview(feedView)
-        
-        segmentControll
-            .anchorVertical(top: view.safeAreaLayoutGuide.topAnchor)
-            .fillSuperviewWidth()
-            .anchorSize(heightConstant: 50)
-        
-        feedView
-            .anchorVertical(top: segmentControll.bottomAnchor, bottom: view.bottomAnchor)
-            .fillSuperviewWidth()
-        
         feedView.setupView()
-        
-        
     }
-
-
 }
